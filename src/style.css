@@ -1,0 +1,125 @@
+/*Reset*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Work Sans", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: hsl(275, 100%, 97%);
+    background-image: url('../assets/images/background-pattern-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: top center;
+}
+
+/* Card */
+.faq_card {
+    margin: 1.5rem;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.faq_header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.faq_header img {
+    height: 28px;
+    margin-right: 1.7rem;
+}
+
+.faq_question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border: none;
+    background-color: #fff;
+    transition: 0.3s;
+}
+
+.faq_item:not(:last-child) {
+    border-bottom: 2px solid rgba(128, 128, 128, 0.151);
+}
+
+.faq_question span {
+    margin-right: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.faq_item {
+    display: flex;
+    flex-direction: column;
+}
+
+.faq_answer {
+    overflow: hidden;
+    transition: grid-template-rows 0.3s ease, opacity 0.2s ease;
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+}
+.faq_answer[hidden] {
+    display: none;
+}
+
+.faq_answer p {
+    font-size: 14px;
+    color: gray;
+    line-height: 1.3rem;
+    padding: 1rem 0;
+
+}
+.faq_answer > p {
+    padding: 1rem 0;
+}
+
+.faq_item.active .faq_answer {
+    grid-template-rows: 1fr;
+    opacity: 1;
+}
+
+.faq_item.active img {
+    content: url('../assets/images/icon-minus.svg');
+}
+
+/*Footer*/
+.attribution {
+    font-size: 12px;
+    text-align: center;
+    padding: 10px;
+}
+
+.attribution a {
+    color: hsl(292, 42%, 14%);
+    font-weight: 700;
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        background-image: url('../assets/images/background-pattern-desktop.svg');
+    }
+
+    .faq_card {
+        max-width: 550px;
+    }
+    .faq_question{
+        cursor:pointer;
+    }
+    .faq_question:hover {
+        color: hsl(293, 100%, 40%);
+    }
+}
