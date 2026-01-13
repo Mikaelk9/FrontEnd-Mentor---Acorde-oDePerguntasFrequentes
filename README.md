@@ -29,7 +29,6 @@ Os usuários devem ser capazes de:
 
 ### Links
 
-- URL da solução: [URL da solução aqui](*)
 - URL do site ao vivo: [URL do site ao vivo aqui](https://front-end-mentor-acorde-o-de-pergun.vercel.app/)
 
 ## Meu Processo
