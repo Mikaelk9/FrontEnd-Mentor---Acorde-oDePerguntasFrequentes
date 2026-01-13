@@ -26,6 +26,7 @@ body {
     background-color: #fff;
     padding: 1.5rem;
     border-radius: 10px;
+    box-shadow: 8px 8px 20px 0px rgba(85, 85, 85, 0.08);
 }
 
 .faq_header {
